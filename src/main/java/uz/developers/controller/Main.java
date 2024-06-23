@@ -1,4 +1,4 @@
-package uz.developers;
+package uz.developers.controller;
 
 import uz.developers.model.User;
 import uz.developers.service.DatabaseService;

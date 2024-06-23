@@ -12,11 +12,11 @@
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/developers/Main.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/uz/developers/model/User.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/uz/developers/service/DatabaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,11 +64,11 @@
 }</component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="uz.developers.Main" />
+      <option name="MAIN_CLASS_NAME" value="uz.developers.controller.Main" />
       <module name="payment" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="uz.developers.*" />
+          <option name="PATTERN" value="uz.developers.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,6 +112,7 @@
       <workItem from="1718990609717" duration="823000" />
       <workItem from="1719015523091" duration="9471000" />
       <workItem from="1719050679638" duration="3290000" />
+      <workItem from="1719117753159" duration="301000" />
     </task>
     <servers />
   </component>
