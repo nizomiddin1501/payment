@@ -1,47 +1,53 @@
 package uz.developers.model;
 
 public class User {
-
-    private int id;
+    private Integer id;
+    private String firstname;
+    private String lastname;
     private String username;
-    private String phone_number;
+    private String password;
 
-    private String card_number;
-    private int balance;
-
-    public User(int id, String username, String phone_number, String card_number, int balance) {
-        this.id = id;
-        this.username = username;
-        this.phone_number = phone_number;
-        this.card_number = card_number;
-        this.balance = balance;
-    }
 
     public User() {
     }
 
-
-    public User(String username, String phone_number, String card_number, int balance) {
+    public User(Integer id, String firstname, String lastname, String username, String password) {
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
         this.username = username;
-        this.phone_number = phone_number;
-        this.card_number = card_number;
-        this.balance = balance;
+        this.password = password;
     }
 
-    public int getId() {
+    public User(String firstname, String lastname, String username, String password) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.username = username;
+        this.password = password;
+    }
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getCard_number() {
-        return card_number;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setCard_number(String card_number) {
-        this.card_number = card_number;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     public String getUsername() {
@@ -52,30 +58,22 @@ public class User {
         this.username = username;
     }
 
-    public String getPhone_number() {
-        return phone_number;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
-    }
-
-    public int getBalance() {
-        return balance;
-    }
-
-    public void setBalance(int balance) {
-        this.balance = balance;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
                 ", username='" + username + '\'' +
-                ", phone_number='" + phone_number + '\'' +
-                ", card_number='" + card_number + '\'' +
-                ", balance=" + balance +
+                ", password='" + password + '\'' +
                 '}';
     }
 }

@@ -1,6 +1,6 @@
 package uz.developers.controller;
 
-import uz.developers.model.User;
+import uz.developers.model.Account;
 import uz.developers.service.DatabaseService;
 
 import java.util.Scanner;
@@ -16,7 +16,12 @@ public class Main {
         boolean islui = true;
 
         while (islui) {
-            System.out.println("0 => Exit, 1 => Add Accounts, 2 => Edit Account, 3 => Delete Account, 4 => List Accounts, 5 => Account by Id");
+            System.out.println("0 => Exit, " +
+                    "1 => Add Accounts, " +
+                    "2 => Edit Account, " +
+                    "3 => Delete Account, " +
+                    "4 => List Accounts, " +
+                    "5 => Account by Id");
             int i = scanner.nextInt();
             switch (i) {
                 case 0:
@@ -32,7 +37,7 @@ public class Main {
                     String card_number = isTrue();
                     System.out.println("Enter your balance");
                     int balance = scanner.nextInt();
-                    User user = new User(username, phone_number, card_number, balance);
+                    Account user = new Account(username, phone_number, card_number, balance);
                     databaseService.addAccount(user);
                     break;
                 case 2:
