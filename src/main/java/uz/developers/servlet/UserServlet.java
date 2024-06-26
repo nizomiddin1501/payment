@@ -1,5 +1,6 @@
 package uz.developers.servlet;
 
+import uz.developers.model.Result;
 import uz.developers.model.User;
 import uz.developers.service.DatabaseService;
 
@@ -10,34 +11,53 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-@WebServlet("/register")
+import java.io.PrintWriter;
+
+@WebServlet(value = "/register")
 public class UserServlet extends HttpServlet {
 
+    public UserServlet() {
+        super();
+    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.getWriter().append("Served at: ").append(req.getContextPath());
+       // resp.getWriter().append("Served at: ").append(req.getContextPath());
+        resp.sendRedirect("userRegister.jsp");
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/web/views/userRegister.jsp");
-        dispatcher.forward(req,resp);
+//                RequestDispatcher dispatcher = req.getRequestDispatcher("/web/userRegister.jsp");
+//        dispatcher.forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setContentType("text/html;charset=UTF=8");
         String firstname = req.getParameter("firstname");
         String lastname = req.getParameter("lastname");
         String username = req.getParameter("username");
         String password = req.getParameter("password");
+        String prePassword = req.getParameter("prePassword");
+
+        PrintWriter writer = resp.getWriter();
+
+        if (password.equals(prePassword)){
+            DatabaseService databaseService = new DatabaseService();
+            User user = new User(firstname, lastname, username, password);
+            Result result = databaseService.registerUser(user);
+            if (result.isSuccess()){
+                writer.write("<h1 color='green'>"+result.getMessage()+"</h1>");
+                resp.sendRedirect("userLogin.jsp");
+            }else {
+                writer.write("<h1 color='red'>"+result.getMessage()+"</h1>");
+                resp.sendRedirect("userRegister.jsp");
+            }
+        }
 
 
-        User user = new User(firstname,lastname,username,password);
-        DatabaseService databaseService = new DatabaseService();
-        databaseService.registerUser(user);
-
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/web/views/userDetails.jsp");
-        dispatcher.forward(req,resp);
 
 
+//        RequestDispatcher dispatcher = req.getRequestDispatcher("/web/userDetails.jsp");
+//        dispatcher.forward(req, resp);
 
 
     }

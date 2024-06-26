@@ -9,6 +9,37 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.16.2" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.16.2" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.16.2" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.16.2" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.16.2" />
+          <element id="library" level="project" name="Maven: com.sun.activation:jakarta.activation:2.0.1" />
+          <element id="library" level="project" name="Maven: io.micrometer:micrometer-commons:1.12.4" />
+          <element id="library" level="project" name="Maven: io.micrometer:micrometer-observation:1.12.4" />
+          <element id="library" level="project" name="Maven: io.swagger.core.v3:swagger-annotations-jakarta:2.2.21" />
+          <element id="library" level="project" name="Maven: io.swagger.core.v3:swagger-core-jakarta:2.2.21" />
+          <element id="library" level="project" name="Maven: io.swagger.core.v3:swagger-models-jakarta:2.2.21" />
+          <element id="library" level="project" name="Maven: jakarta.validation:jakarta.validation-api:3.0.2" />
+          <element id="library" level="project" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:3.0.1" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.14.0" />
+          <element id="library" level="project" name="Maven: org.checkerframework:checker-qual:3.5.0" />
+          <element id="library" level="project" name="Maven: org.postgresql:postgresql:42.2.18" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:2.0.9" />
+          <element id="library" level="project" name="Maven: org.springdoc:springdoc-openapi-starter-common:2.5.0" />
+          <element id="library" level="project" name="Maven: org.springdoc:springdoc-openapi-starter-webmvc-api:2.5.0" />
+          <element id="library" level="project" name="Maven: org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-autoconfigure:3.2.4" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot:3.2.4" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:6.1.5" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:6.1.5" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:6.1.5" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:6.1.5" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:6.1.5" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:6.1.5" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:6.1.5" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:6.1.5" />
+          <element id="library" level="project" name="Maven: org.webjars:swagger-ui:5.13.0" />
+          <element id="library" level="project" name="Maven: org.yaml:snakeyaml:2.2" />
         </element>
       </element>
     </root>
