@@ -12,11 +12,23 @@
 </head>
 <body>
 
+<h1>Auth successfully</h1>
+
 <a href="/login">Login</a>
 <br>
 <a href="/register">Register</a>
 
-<img src="3.png" alt="" style="text-align: justify-all">
+<a href="transfer.jsp">Transaction</a>
+<br>
+<a href="clients.jsp">Clients</a>
+<br>
+<a href="userLogin.jsp">Logout</a>
+<br>
+<a href="userLogin.jsp">Login</a>
+<br>
+<a href="userRegister.jsp">Register</a>
+
+
 
 
 

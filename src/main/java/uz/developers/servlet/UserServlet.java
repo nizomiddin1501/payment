@@ -22,11 +22,9 @@ public class UserServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-       // resp.getWriter().append("Served at: ").append(req.getContextPath());
         resp.sendRedirect("userRegister.jsp");
 
-//                RequestDispatcher dispatcher = req.getRequestDispatcher("/web/userRegister.jsp");
-//        dispatcher.forward(req, resp);
+
     }
 
     @Override

@@ -10,32 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0419a408-73d1-4aea-a404-2b107c306a35" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/developers/model/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/developers/servlet/HomeServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/developers/servlet/LoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/includes/footer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/includes/head.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/includes/navbar.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/userLogin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/payment_Web_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/payment_Web_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7e40af71-2cc9-4771-8add-228efca0306d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7e40af71-2cc9-4771-8add-228efca0306d.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/service/DatabaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/service/DatabaseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/servlet/Home.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/service/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/service/DatabaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/servlet/LoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/servlet/LoginServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/servlet/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/servlet/UserServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/userDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/userDetails.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/userRegister.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/userLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/userLogin.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +66,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Artifacts",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
     "spring.configuration.checksum": "f83c2a85d972a89238f31296c63f0dbc"
@@ -139,7 +121,7 @@
       <deployment>
         <artifact name="payment:Web exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/home" />
+            <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
@@ -255,6 +237,9 @@
       <workItem from="1719315024489" duration="133000" />
       <workItem from="1719315400858" duration="466000" />
       <workItem from="1719332589811" duration="23376000" />
+      <workItem from="1719509385920" duration="526000" />
+      <workItem from="1719510428869" duration="996000" />
+      <workItem from="1719546641950" duration="1839000" />
     </task>
     <servers />
   </component>

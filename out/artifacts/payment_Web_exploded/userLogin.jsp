@@ -14,7 +14,7 @@
 
 
 <div align="center">
-  <h1>Register form</h1>
+  <h1>Login form</h1>
   <form action="<%= request.getContextPath()%>/login" method="post">
     <table style="with: 80%">
       <tr>
@@ -29,8 +29,7 @@
     </table>
     <input type="submit" value="Login">
   </form>
-  <%--    <p>${message}</p>--%>
-  <%--    <a href="userDetails.jsp">View Registration Result</a>--%>
+
 
 </div>
 
