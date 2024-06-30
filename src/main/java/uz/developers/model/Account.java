@@ -20,7 +20,6 @@ public class Account {
     public Account() {
     }
 
-
     public Account(String username, String phone_number, String card_number, int balance) {
         this.username = username;
         this.phone_number = phone_number;

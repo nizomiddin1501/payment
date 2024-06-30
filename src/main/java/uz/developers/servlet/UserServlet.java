@@ -54,8 +54,6 @@ public class UserServlet extends HttpServlet {
 
 
 
-//        RequestDispatcher dispatcher = req.getRequestDispatcher("/web/userDetails.jsp");
-//        dispatcher.forward(req, resp);
 
 
     }

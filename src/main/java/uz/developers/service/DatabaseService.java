@@ -87,7 +87,7 @@ public class DatabaseService {
         }
     }
 
-    public void editAccount(String senderCardNumber, String receiverCardNumber, int amount) {
+    public void transfer(String senderCardNumber, String receiverCardNumber, int amount) {
         try {
             Connection connection = DriverManager.getConnection(url, dbUser, dbPassword);
             String query = "call transfer(?,?,?,?)";
@@ -105,6 +105,30 @@ public class DatabaseService {
             throw new RuntimeException(e);
         }
     }
+
+    public void editAccount(Account account){
+        try {
+            Class.forName("org.postgresql.Driver");
+            Connection connection = DriverManager.getConnection(url,dbUser,dbPassword);
+            String query = "update accounts set username=?,phone_number=?,card_number=?,balance=? where id=?";
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1,account.getUsername());
+            preparedStatement.setString(2,account.getPhone_number());
+            preparedStatement.setString(3,account.getCard_number());
+            preparedStatement.setInt(4,account.getBalance());
+            preparedStatement.setInt(5,account.getId());
+            preparedStatement.executeUpdate();
+            System.out.println("User is edited by prepareStatement");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+
+
 
     public void deleteAccount(int userId) {
         try {

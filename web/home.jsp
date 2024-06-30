@@ -10,23 +10,25 @@
 <head>
     <title>Home</title>
 </head>
-<body>
+<body background="2.jpg">
+
+
 
 <h1>Auth successfully</h1>
 
 <a href="/login">Login</a>
 <br>
 <a href="/register">Register</a>
+<br>
+<a href="/crud">Crud</a>
+<br>
+<a href="user-form.jsp">User Form</a>
+<br>
+<a href="user-list.jsp">User List</a>
+<br>
 
-<a href="transfer.jsp">Transaction</a>
-<br>
-<a href="clients.jsp">Clients</a>
-<br>
-<a href="userLogin.jsp">Logout</a>
-<br>
-<a href="userLogin.jsp">Login</a>
-<br>
-<a href="userRegister.jsp">Register</a>
+
+
 
 
 

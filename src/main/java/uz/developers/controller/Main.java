@@ -47,7 +47,7 @@ public class Main {
                     String receiverCardNumber = scanner.next();
                     System.out.println("Enter sending amount");
                     int sendingAmount = scanner.nextInt();
-                    databaseService.editAccount(senderCardNumber, receiverCardNumber, sendingAmount);
+                    databaseService.transfer(senderCardNumber, receiverCardNumber, sendingAmount);
                     break;
                 case 3:
                     System.out.println("Enter account id");
