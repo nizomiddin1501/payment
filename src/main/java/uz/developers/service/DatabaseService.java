@@ -2,9 +2,12 @@ package uz.developers.service;
 
 import uz.developers.model.Account;
 import uz.developers.model.Result;
+import uz.developers.model.Transactions;
 import uz.developers.model.User;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DatabaseService {
 
@@ -100,23 +103,31 @@ public class DatabaseService {
             callableStatement.execute();
             statusMessage = callableStatement.getString(4);
 
+            Transactions transactions = new Transactions();
+            query = "insert into transaction(amount,date,senderCardNumber,receiverCardNumber) values(?,?,?,?) ";
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setDouble(1, transactions.getAmount());
+            preparedStatement.setString(2, String.valueOf(transactions.getDate()));
+            preparedStatement.setString(3,transactions.getSenderCardNumber());
+            preparedStatement.setString(4,transactions.getReceiverCardNumber());
+            preparedStatement.executeUpdate();
             System.out.println(statusMessage);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public void editAccount(Account account){
+    public void editAccount(Account account) {
         try {
             Class.forName("org.postgresql.Driver");
-            Connection connection = DriverManager.getConnection(url,dbUser,dbPassword);
+            Connection connection = DriverManager.getConnection(url, dbUser, dbPassword);
             String query = "update accounts set username=?,phone_number=?,card_number=?,balance=? where id=?";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1,account.getUsername());
-            preparedStatement.setString(2,account.getPhone_number());
-            preparedStatement.setString(3,account.getCard_number());
-            preparedStatement.setInt(4,account.getBalance());
-            preparedStatement.setInt(5,account.getId());
+            preparedStatement.setString(1, account.getUsername());
+            preparedStatement.setString(2, account.getPhone_number());
+            preparedStatement.setString(3, account.getCard_number());
+            preparedStatement.setInt(4, account.getBalance());
+            preparedStatement.setInt(5, account.getId());
             preparedStatement.executeUpdate();
             System.out.println("User is edited by prepareStatement");
         } catch (SQLException e) {
@@ -125,9 +136,6 @@ public class DatabaseService {
             throw new RuntimeException(e);
         }
     }
-
-
-
 
 
     public void deleteAccount(int userId) {
@@ -173,7 +181,7 @@ public class DatabaseService {
                 count = resultSet1.getInt(1);
             }
             if (count > 0) {
-                return new Result("Password is already exist",false);
+                return new Result("Password is already exist", false);
             }
 
 
@@ -184,7 +192,7 @@ public class DatabaseService {
             callableStatement.setString(3, user.getUsername());
             callableStatement.setString(4, user.getPassword());
             callableStatement.execute();
-            return new Result("Successfully registered",true);
+            return new Result("Successfully registered", true);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
             return new Result("Error in server", false);
@@ -196,10 +204,10 @@ public class DatabaseService {
 
     //login user
 
-    public User login(String username, String password){
+    public User login(String username, String password) {
         try {
             Class.forName("org.postgresql.Driver");
-            Connection connection = DriverManager.getConnection(url,dbUser,dbPassword);
+            Connection connection = DriverManager.getConnection(url, dbUser, dbPassword);
             String query = "select * from users where username=? and password=?";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, username);
@@ -229,7 +237,6 @@ public class DatabaseService {
     }
 
 
-
     public void deleteUser(int userId) {
         try {
             Connection connection = DriverManager.getConnection(url, dbUser, dbPassword);
@@ -243,5 +250,28 @@ public class DatabaseService {
         }
     }
 
-
+    public List<Transactions> getAllTransactions(){
+        List<Transactions> transactionsList = new ArrayList<>();
+        try {
+            Class.forName("org.postgresql.Driver");
+            Connection connection = DriverManager.getConnection(url,dbUser,dbPassword);
+            String query = "select * from transactions";
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                Transactions transactions = new Transactions();
+                transactions.setId(resultSet.getInt(1));
+                transactions.setAmount(Double.valueOf(resultSet.getString(2)));
+                transactions.setDate(resultSet.getDate(3));
+                transactions.setSenderCardNumber(resultSet.getString(4));
+                transactions.setReceiverCardNumber(resultSet.getString(5));
+                transactionsList.add(transactions);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        return transactionsList;
+    }
 }

@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(value = "/")
+@WebServlet(value = "/login")
 public class LoginServlet extends HttpServlet {
 
     @Override

@@ -10,38 +10,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0419a408-73d1-4aea-a404-2b107c306a35" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/LogoutServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/payment_Web_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/payment_Web_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/ClientServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/DeleteServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/TransactionServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/WithdrawServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/developers/model/Transactions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/account-table.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/account.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/transaction.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/Error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/Error.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/service/DbService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/service/DbService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/servlet/CrudServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/servlet/HomeServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/servlet/LoginServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/servlet/UserServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/CrudServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/HomeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/HomeServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/LoginServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/includes/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/includes/footer.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/includes/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/includes/navbar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/user-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/user-form.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/user-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/user-list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/userDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/userDetails.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/user-form.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/user-list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/userDetails.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/userLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/userLogin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/userRegister.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/userRegister.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/controller/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/servlet/CrudServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/CrudServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/servlet/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/HomeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/servlet/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/UserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Error.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/controller/CrudServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/controller/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/HomeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/controller/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/service/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/service/DatabaseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/includes/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/includes/footer.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/includes/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/includes/navbar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/user-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/user-form.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/user-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/user-list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/userDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/userDetails.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/user-form.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/user-list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/userDetails.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/userLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/userLogin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/userRegister.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/userRegister.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +107,7 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="uz.developers.model" />
+      <recent name="uz.developers.controller" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.apache-tomcat-9.0.14">
@@ -276,27 +273,11 @@
       <workItem from="1719902679862" duration="3655000" />
       <workItem from="1719920178455" duration="429000" />
       <workItem from="1719935397547" duration="111000" />
-      <workItem from="1719998134123" duration="642000" />
+      <workItem from="1719998134123" duration="19182000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uz/developers/controller/UserServlet.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uz/developers/service/DatabaseService.java</url>
-          <line>150</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

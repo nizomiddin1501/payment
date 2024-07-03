@@ -9,10 +9,15 @@
 
 <%
   Account auth = (Account) request.getSession().getAttribute("auth");
+  request.getSession().removeAttribute("auth");
   if (auth != null) {
     response.sendRedirect("index.jsp");
   }
 %>
+
+
+
+
 
 <html>
 <head>
@@ -56,6 +61,7 @@
 
 
 <div class="container">
+
   <div class="card w-50 mx-auto my-5">
     <div class="card-header text-center">User login</div>
     <div class="card-body">

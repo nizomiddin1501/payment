@@ -8,13 +8,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Home</title>
+    <title> Payment System </title>
     <%@include file="includes/head.jsp" %>
 </head>
-<body background="2.jpg">
+<body>
 
 <%@include file="includes/navbar.jsp" %>
-
+<div class="container">
+    <div class="card-header my-3">Main page</div>
+</div>
 
 
 <h1>Auth successfully</h1>
@@ -23,12 +25,6 @@
 <br>
 <a href="/register">Register</a>
 <br>
-<a href="/crud">Crud</a>
-<br>
-<a href="user-form.jsp">User Form</a>
-<br>
-<a href="user-list.jsp">User List</a>
-<br>
 
 
 
@@ -39,5 +35,7 @@
 
 
 
+
+<%@include file="includes/footer.jsp" %>
 </body>
 </html>
