@@ -9,8 +9,10 @@
 <html>
 <head>
     <title>Register Result</title>
+    <%@include file="includes/head.jsp" %>
 </head>
 <body>
+<%@include file="includes/navbar.jsp" %>
 
 <h1>User successfully registered</h1>
 <%--<a href="userRegister.jsp">Back to Registration</a>--%>

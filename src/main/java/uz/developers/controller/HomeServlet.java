@@ -1,4 +1,4 @@
-package uz.developers.servlet;
+package uz.developers.controller;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

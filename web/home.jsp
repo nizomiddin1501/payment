@@ -9,8 +9,11 @@
 <html>
 <head>
     <title>Home</title>
+    <%@include file="includes/head.jsp" %>
 </head>
 <body background="2.jpg">
+
+<%@include file="includes/navbar.jsp" %>
 
 
 

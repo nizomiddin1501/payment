@@ -1,4 +1,4 @@
-package uz.developers.servlet;
+package uz.developers.controller;
 
 import uz.developers.model.Account;
 import uz.developers.model.User;
@@ -70,7 +70,7 @@ public class CrudServlet extends HttpServlet {
 
     private void listAccount(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException, SQLException {
         List<Account> listAccount = dbService.getAccounts();
-        req.getAttribute("listAccount");
+        req.setAttribute("listAccount",listAccount);
         RequestDispatcher dispatcher = req.getRequestDispatcher("user-list.jsp");
         dispatcher.forward(req,resp);
     }
@@ -83,7 +83,7 @@ public class CrudServlet extends HttpServlet {
         String card_number = req.getParameter("card_number");
         int balance = Integer.parseInt(req.getParameter("balance"));
 
-        Account account = new Account(username,phone_number,card_number,balance);
+        Account account = new Account(id,username,phone_number,card_number,balance);
         dbService.updateAccount(account);
         resp.sendRedirect("list");  //
 

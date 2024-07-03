@@ -10,12 +10,14 @@
 <html>
 <head>
     <title>User Management Application</title>
+    <%@include file="includes/head.jsp" %>
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
           crossorigin="anonymous">
 </head>
 <body>
+<%@include file="includes/navbar.jsp" %>
 
 <header>
 
@@ -25,6 +27,12 @@
             <li><a href="<%request.getContextPath();%>/list"
                    class="nav-link">Accounts</a></li>
         </ul>
+
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li><a href="<%=request.getContextPath()%>/logout"
+                   class="nav-link">Logout</a></li>
+        </ul>
+
     </nav>
 </header>
 <br>

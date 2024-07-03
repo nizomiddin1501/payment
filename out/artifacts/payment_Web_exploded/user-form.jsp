@@ -9,13 +9,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Account Management Application</title>
+    <title>Account Management Application</title>\
+    <%@include file="includes/head.jsp" %>
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
           crossorigin="anonymous">
 </head>
 <body>
+<%@include file="includes/navbar.jsp" %>
 
 <header>
     <nav class="navbar navbar-expand-md navbar-dark"
@@ -27,6 +29,12 @@
             <li><a href="<%request.getContextPath();%>/list"
                    class="nav-link">Accounts</a></li>
         </ul>
+
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li><a href="<%=request.getContextPath()%>/logout"
+                   class="nav-link">Logout</a></li>
+        </ul>
+
     </nav>
 </header>
 <br>
@@ -43,10 +51,10 @@
                     <caption>
                         <h2>
                             <c:if test="${account!=null}">
-                                Edit User
+                                Edit Account
                             </c:if>
                             <c:if test="${account==null}">
-                                Add New User
+                                Add New Account
                             </c:if>
                         </h2>
                     </caption>
@@ -57,13 +65,13 @@
                     <fieldset class="form-group">
                         <label>Username</label> <input type="text"
                                                        value="<c:out value='${account.username}'/>" class="form-control"
-                                                       name="username" required="required">
+                                                       name="username" required="required" minlength="5">
                     </fieldset>
 
                     <fieldset class="form-group">
                         <label>Phone Number</label> <input type="text"
                                                        value="<c:out value='${account.phone_number}'/>" class="form-control"
-                                                       name="phone_number" required="required">
+                                                       name="phone_number" required="required" >
                     </fieldset>
 
                         <fieldset class="form-group">

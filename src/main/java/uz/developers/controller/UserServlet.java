@@ -1,4 +1,4 @@
-package uz.developers.servlet;
+package uz.developers.controller;
 
 import uz.developers.model.Result;
 import uz.developers.model.User;

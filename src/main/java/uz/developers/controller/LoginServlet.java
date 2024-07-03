@@ -1,4 +1,4 @@
-package uz.developers.servlet;
+package uz.developers.controller;
 
 import uz.developers.model.User;
 import uz.developers.service.DatabaseService;
@@ -37,7 +37,7 @@ public class LoginServlet extends HttpServlet {
             resp.sendRedirect("home.jsp");
         }else {
             writer.write("<h1>Password or login error</h1>");
-            resp.sendRedirect("userLogin.jsp");
+            resp.sendRedirect("userRegister.jsp");
         }
     }
 }
