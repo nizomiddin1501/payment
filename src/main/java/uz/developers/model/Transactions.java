@@ -13,6 +13,6 @@ public class Transactions {
     private int id;
     private Double amount;
     private Date date;
-    private String senderCardNumber;
-    private String receiverCardNumber;
+    private String sender_card_number;
+    private String receiver_card_number;
 }

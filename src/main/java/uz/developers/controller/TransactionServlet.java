@@ -1,6 +1,7 @@
 package uz.developers.controller;
 
 import uz.developers.model.Account;
+import uz.developers.service.DatabaseService;
 import uz.developers.service.DbService;
 
 import javax.servlet.ServletException;
@@ -29,9 +30,12 @@ public class TransactionServlet extends HttpServlet {
         String phone_number = req.getParameter("phone_number");
         int balance = Integer.parseInt(req.getParameter("balance"));
         String card_number = req.getParameter("card_number");
-        DbService dbService = new DbService();
+        //DbService dbService = new DbService();
+        DatabaseService databaseService = new DatabaseService();
+
         Account account = new Account( username,phone_number,card_number,balance);
-        dbService.addAccount(account);
+        databaseService.editAccount(account);
+       // dbService.updateAccount(account);
 
         resp.sendRedirect("account-table.jsp");
 

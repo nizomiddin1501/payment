@@ -8,16 +8,16 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="home.jsp">Home</a></li>
                 <%--                <li class="nav-item"><a class="nav-link" href="client.jsp">Cart <span--%>
                 <%--                        class="badge badge-danger px-1">${cart_list.size()}</span></a></li>--%>
                 <%--                <%if (auth != null) {%>--%>
-                <li class="nav-item"><a class="nav-link" href="/client">Clients</a></li>
-                <li class="nav-item"><a class="nav-link" href="/transaction">Transaction</a></li>
+                <li class="nav-item"><a class="nav-link" href="account-table.jsp">Clients</a></li>
+                <li class="nav-item"><a class="nav-link" href="transaction.jsp">Transaction</a></li>
                 <%--                <%} else {%>--%>
-                <li class="nav-item"><a class="nav-link" href="/login">Sign in</a></li>
-                <li class="nav-item"><a class="nav-link" href="/register">Sign up</a></li>
-                <li class="nav-item"><a class="nav-link" href="/login">Log out</a></li>
+                <li class="nav-item"><a class="nav-link" href="userLogin.jsp">Sign in</a></li>
+                <li class="nav-item"><a class="nav-link" href="userRegister.jsp">Sign up</a></li>
+                <li class="nav-item"><a class="nav-link" href="userLogin.jsp">Log out</a></li>
 
         </div>
     </div>

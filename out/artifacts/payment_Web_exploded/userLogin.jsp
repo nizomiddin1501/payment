@@ -65,7 +65,7 @@
   <div class="card w-50 mx-auto my-5">
     <div class="card-header text-center">User login</div>
     <div class="card-body">
-      <form action="/login" method="post">
+      <form action="login" method="post">
         <div class="form-group">
           <label for="">Username</label>
           <input type="name" class="form-control" name="username" placeholder="Enter your  username" required>

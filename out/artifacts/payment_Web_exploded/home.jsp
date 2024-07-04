@@ -19,7 +19,7 @@
 </div>
 
 
-<h1>Auth successfully</h1>
+
 
 <a href="/login">Login</a>
 <br>

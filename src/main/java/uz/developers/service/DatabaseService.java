@@ -6,6 +6,7 @@ import uz.developers.model.Transactions;
 import uz.developers.model.User;
 
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -104,12 +105,13 @@ public class DatabaseService {
             statusMessage = callableStatement.getString(4);
 
             Transactions transactions = new Transactions();
-            query = "insert into transaction(amount,date,senderCardNumber,receiverCardNumber) values(?,?,?,?) ";
+            LocalDate transactionDate = LocalDate.now();
+            query = "insert into transactions(amount,date,sender_card_number,receiver_card_number) values(?,?,?,?) ";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setDouble(1, transactions.getAmount());
-            preparedStatement.setString(2, String.valueOf(transactions.getDate()));
-            preparedStatement.setString(3,transactions.getSenderCardNumber());
-            preparedStatement.setString(4,transactions.getReceiverCardNumber());
+            preparedStatement.setDouble(1, amount);
+            preparedStatement.setDate(2, Date.valueOf(transactionDate));
+            preparedStatement.setString(3,senderCardNumber);
+            preparedStatement.setString(4,receiverCardNumber);
             preparedStatement.executeUpdate();
             System.out.println(statusMessage);
         } catch (SQLException e) {
@@ -121,13 +123,12 @@ public class DatabaseService {
         try {
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(url, dbUser, dbPassword);
-            String query = "update accounts set username=?,phone_number=?,card_number=?,balance=? where id=?";
+            String query = "update accounts set username=?,phone_number=?,card_number=? where id=?";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, account.getUsername());
             preparedStatement.setString(2, account.getPhone_number());
             preparedStatement.setString(3, account.getCard_number());
-            preparedStatement.setInt(4, account.getBalance());
-            preparedStatement.setInt(5, account.getId());
+            preparedStatement.setInt(4, account.getId());
             preparedStatement.executeUpdate();
             System.out.println("User is edited by prepareStatement");
         } catch (SQLException e) {
@@ -250,6 +251,10 @@ public class DatabaseService {
         }
     }
 
+
+
+
+
     public List<Transactions> getAllTransactions(){
         List<Transactions> transactionsList = new ArrayList<>();
         try {
@@ -263,8 +268,8 @@ public class DatabaseService {
                 transactions.setId(resultSet.getInt(1));
                 transactions.setAmount(Double.valueOf(resultSet.getString(2)));
                 transactions.setDate(resultSet.getDate(3));
-                transactions.setSenderCardNumber(resultSet.getString(4));
-                transactions.setReceiverCardNumber(resultSet.getString(5));
+                transactions.setSender_card_number(resultSet.getString(4));
+                transactions.setReceiver_card_number(resultSet.getString(5));
                 transactionsList.add(transactions);
             }
         } catch (SQLException e) {

@@ -27,6 +27,13 @@ public class Account {
         this.balance = balance;
     }
 
+    public Account(int id, String username, String phone_number, String card_number) {
+        this.id = id;
+        this.username = username;
+        this.phone_number = phone_number;
+        this.card_number = card_number;
+    }
+
     public int getId() {
         return id;
     }
