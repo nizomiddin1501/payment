@@ -2,6 +2,7 @@ package uz.developers.controller;
 
 import uz.developers.model.Account;
 import uz.developers.service.DatabaseService;
+import uz.developers.service.DbConnection;
 import uz.developers.service.DbService;
 
 import javax.servlet.ServletException;
@@ -20,7 +21,7 @@ public class TransactionServlet extends HttpServlet {
         if (auth != null) {
             response.sendRedirect("transactions.jsp");
         } else {
-            response.sendRedirect("userLogin.jsp");
+            response.sendRedirect("login.jsp");
         }
     }
 
@@ -31,7 +32,7 @@ public class TransactionServlet extends HttpServlet {
         int balance = Integer.parseInt(req.getParameter("balance"));
         String card_number = req.getParameter("card_number");
         //DbService dbService = new DbService();
-        DatabaseService databaseService = new DatabaseService();
+        DatabaseService databaseService = new DatabaseService(DbConnection.getConnection());
 
         Account account = new Account( username,phone_number,card_number,balance);
         databaseService.editAccount(account);

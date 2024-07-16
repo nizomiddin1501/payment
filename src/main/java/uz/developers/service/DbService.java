@@ -9,9 +9,19 @@ import java.util.List;
 
 public class DbService {
 
-    private String url = "jdbc:postgresql://localhost:5432/relearn";
-    private String dbUser = "postgres";
-    private String dbPassword = "1234";
+
+    private Connection connection;
+
+    CallableStatement callableStatement;
+
+
+    PreparedStatement preparedStatement;
+
+    ResultSet resultSet;
+
+    public DbService(Connection connection) {
+        this.connection = connection;
+    }
 
     private static final String insertAccountQuery = "insert into users(username,phone_number,balance,card_number) values(?,?,?,?);";
     private static final String getAccountByIdQuery = "select id, username, phone_number, balance, card_number from accounts where id=?";
@@ -19,24 +29,12 @@ public class DbService {
     private static final String deleteAccountQuery = "delete from accounts where id =?";
     private static final String updateAccountQuery = "update accounts set username=?,phone_number=?,card_number=?where id=?";
 
-    protected Connection getConnection(){
-        Connection connection = null;
-        try {
-            Class.forName("org.postgresql.Driver");
-            connection = DriverManager.getConnection(url,dbUser,dbPassword);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-        return connection;
-    }
+
 
     //insert account
 
     public void addAccount(Account account){
-        try(Connection connection = getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(insertAccountQuery)) {
+        try(PreparedStatement preparedStatement = connection.prepareStatement(insertAccountQuery)) {
             preparedStatement.setString(1,account.getUsername());
             preparedStatement.setString(2,account.getPhone_number());
             preparedStatement.setInt(3,account.getBalance());
@@ -50,8 +48,7 @@ public class DbService {
     //update account
     public boolean updateAccount(Account account){
         boolean rowUpdated;
-        try(Connection connection = getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(updateAccountQuery)) {
+        try(PreparedStatement preparedStatement = connection.prepareStatement(updateAccountQuery)) {
             preparedStatement.setString(1,account.getUsername());
             preparedStatement.setString(2,account.getPhone_number());
             preparedStatement.setInt(3,account.getBalance());
@@ -67,8 +64,7 @@ public class DbService {
     //select account by id
     public Account getAccount(int accountId){  //selectUser
         Account account = null;
-        try(Connection connection = getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(getAccountByIdQuery)) {
+        try(PreparedStatement preparedStatement = connection.prepareStatement(getAccountByIdQuery)) {
             preparedStatement.setInt(1,accountId);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
@@ -87,8 +83,7 @@ public class DbService {
     //select accounts
     public List<Account> getAccounts(){   //selectAllUsers
         List<Account> accounts = new ArrayList<>();
-        try(Connection connection = getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(getAccountsQuery)) {
+        try(PreparedStatement preparedStatement = connection.prepareStatement(getAccountsQuery)) {
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
@@ -107,8 +102,7 @@ public class DbService {
     //delete account
     public boolean deleteAccount(int accountId){
         boolean rowDeleted;
-        try(Connection connection = getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(deleteAccountQuery)) {
+        try(PreparedStatement preparedStatement = connection.prepareStatement(deleteAccountQuery)) {
             preparedStatement.setInt(1,accountId);
             rowDeleted = preparedStatement.executeUpdate() > 0;
         } catch (SQLException e) {

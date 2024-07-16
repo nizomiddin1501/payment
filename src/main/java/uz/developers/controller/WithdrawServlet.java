@@ -2,6 +2,7 @@ package uz.developers.controller;
 
 
 import uz.developers.service.DatabaseService;
+import uz.developers.service.DbConnection;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,7 +21,7 @@ public class WithdrawServlet extends HttpServlet {
         String receiverCardNumber = req.getParameter("receiverCardNumber");
         int amount = Integer.parseInt(req.getParameter("amount"));
 
-        DatabaseService databaseService = new DatabaseService();
+        DatabaseService databaseService = new DatabaseService(DbConnection.getConnection());
         databaseService.transfer(senderCardNumber,receiverCardNumber,amount);
         resp.sendRedirect("account-table.jsp");
 

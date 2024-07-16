@@ -1,6 +1,7 @@
 package uz.developers.controller;
 
 import uz.developers.model.Account;
+import uz.developers.service.DbConnection;
 import uz.developers.service.DbService;
 
 import javax.servlet.ServletException;
@@ -15,12 +16,14 @@ public class ClientServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Account auth = (Account) req.getSession().getAttribute("auth");
-        if (auth != null) {
-            resp.sendRedirect("account-table.jsp");
-        } else {
-            resp.sendRedirect("login.jsp");
-        }
+//        Account auth = (Account) req.getSession().getAttribute("auth");
+//        if (auth != null) {
+//            resp.sendRedirect("account-table.jsp");
+//        } else {
+//            resp.sendRedirect("login.jsp");
+//        }
+//    }
+        req.getRequestDispatcher("clientList.jsp").forward(req, resp);
     }
 
 
@@ -31,7 +34,7 @@ public class ClientServlet extends HttpServlet {
         String phone_number = req.getParameter("phone_number");
         int balance = Integer.parseInt(req.getParameter("balance"));
         String card_number = req.getParameter("card_number");
-        DbService dbService = new DbService();
+        DbService dbService = new DbService(DbConnection.getConnection());
         Account account = new Account( username,phone_number,card_number,balance);
         dbService.addAccount(account);
 

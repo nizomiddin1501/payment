@@ -2,6 +2,7 @@ package uz.developers.controller;
 
 import uz.developers.model.Account;
 import uz.developers.service.DatabaseService;
+import uz.developers.service.DbConnection;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,7 +21,7 @@ public class DeleteServlet extends HttpServlet {
         if (auth != null) {
             response.sendRedirect("account_table.jsp");
         } else {
-            response.sendRedirect("userLogin.jsp");
+            response.sendRedirect("login.jsp");
         }
     }
 
@@ -28,7 +29,7 @@ public class DeleteServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String accountId = req.getParameter("accountId");
 
-        DatabaseService databaseService = new DatabaseService();
+        DatabaseService databaseService = new DatabaseService(DbConnection.getConnection());
         databaseService.deleteAccount(Integer.parseInt(accountId));
         resp.sendRedirect("account_table.jsp");
     }

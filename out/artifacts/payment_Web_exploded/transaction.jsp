@@ -62,8 +62,8 @@
                                 "<td>" + transactions.get(i).getId() + "</td>" +
                                 "<td id='amount_" + transactions.get(i).getId() + "'>$" + (transactions.get(i).getAmount()) + "</td>" +
                                 "<td id='date_" + transactions.get(i).getId() + "'>" + (transactions.get(i).getDate()) + "</td>" +
-                                "<td id='from_" + transactions.get(i).getId() + "'>" + (transactions.get(i).getSenderCardNumber()) + "</td>" +
-                                "<td id='to_" + transactions.get(i).getId() + "'>" + (transactions.get(i).getReceiverCardNumber()) + "</td>" +
+                                "<td id='from_" + transactions.get(i).getId() + "'>" + (transactions.get(i).getSender_card_number()) + "</td>" +
+                                "<td id='to_" + transactions.get(i).getId() + "'>" + (transactions.get(i).getReceiver_card_number()) + "</td>" +
                                 "<tr>"
                 );
             }

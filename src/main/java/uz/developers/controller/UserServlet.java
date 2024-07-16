@@ -3,6 +3,7 @@ package uz.developers.controller;
 import uz.developers.model.Result;
 import uz.developers.model.User;
 import uz.developers.service.DatabaseService;
+import uz.developers.service.DbConnection;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -22,7 +23,7 @@ public class UserServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.sendRedirect("userRegister.jsp");
+        resp.sendRedirect("registration.jsp");
 
 
     }
@@ -39,15 +40,15 @@ public class UserServlet extends HttpServlet {
         PrintWriter writer = resp.getWriter();
 
         if (password.equals(prePassword)){
-            DatabaseService databaseService = new DatabaseService();
+            DatabaseService databaseService = new DatabaseService(DbConnection.getConnection());
             User user = new User(firstname, lastname, username, password);
             Result result = databaseService.registerUser(user);
             if (result.isSuccess()){
                 writer.write("<h1 color='green'>"+result.getMessage()+"</h1>");
-                resp.sendRedirect("userLogin.jsp");
+                resp.sendRedirect("login.jsp");
             }else {
                 writer.write("<h1 color='red'>"+result.getMessage()+"</h1>");
-                resp.sendRedirect("userRegister.jsp");
+                resp.sendRedirect("registration.jsp");
             }
         }
 
