@@ -14,7 +14,7 @@
 
         <div class="col-md-9">
             </hr>
-            <form action="/client" method="post">
+            <form action="/user" method="post">
                 <h2>REGISTER</h2>
                 <section class="vh-100">
                     <div class="container-fluid h-custom">
@@ -41,9 +41,22 @@
                                     </div>
 
                                     <div data-mdb-input-init class="form-outline mb-4">
-                                        <label class="form-label" for="exampleInputUsername">Username</label>
-                                        <input type="number" class="form-control form-control-lg" name="phoneNumber" id="exampleInputUsername" itemid="exampleInputUsername" placeholder="Enter user name" required>
+                                        <label class="form-label" for="exampleInputEmail">Email Address</label>
+                                        <input type="email" class="form-control form-control-lg" name="email" id="exampleInputEmail" itemid="exampleInputEmail" placeholder="Enter Email Address" required>
                                     </div>
+
+
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <label class="form-label" for="exampleInputPhoneNumber">Phone Number</label>
+                                        <input type="number" class="form-control form-control-lg" name="phone_number" id="exampleInputPhoneNumber" itemid="exampleInputPhoneNumber" placeholder="Enter Phone Number" required>
+                                    </div>
+
+
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <label class="form-label" for="exampleInputPhoto">Photo</label>
+                                        <input type="file" class="form-control form-control-lg" name="photo" id="exampleInputPhoto" itemid="exampleInputPhoto" placeholder="Enter Photo Url" required>
+                                    </div>
+
 
 
                                     <div data-mdb-input-init class="form-outline mb-3">
@@ -53,10 +66,6 @@
                                                placeholder="**************" required/>
                                     </div>
 
-                                    <div data-mdb-input-init class="form-outline mb-3">
-                                        <label class="form-label" for="exampleInputPhoto">Photo</label>
-                                        <input type="file" class="form-control form-control-lg" name="photo" id="exampleInputPhoto" itemid="exampleInputPhoto" placeholder="Upload photo" required/>
-                                    </div>
 
                                     <div class="text-center text-lg-start mt-4 pt-2">
                                         <button type="submit" data-mdb-button-init data-mdb-ripple-init
@@ -73,38 +82,6 @@
                 </section>
 
 
-                <%--                <div class="form-group">--%>
-                <%--                    <label for="exampleInputFirstname">Firstname</label>--%>
-                <%--                    <input type="text" class="form-control" name="firstname" id="exampleInputFirstname"  placeholder="Enter Firstname">--%>
-                <%--                </div>--%>
-
-                <%--                <div class="form-group">--%>
-                <%--                    <label for="exampleInputLastname">Lastname</label>--%>
-                <%--                    <input type="text" class="form-control" name="lastname" id="exampleInputLastname"  placeholder="Enter Lastname">--%>
-                <%--                </div>--%>
-
-                <%--                <div class="form-group">--%>
-                <%--                    <label for="exampleInputPhoneNumber">Phone Number</label>--%>
-                <%--                    <input type="number" class="form-control" name="phoneNumber" id="exampleInputPhoneNumber"  placeholder="Enter Phone Number">--%>
-                <%--                </div>--%>
-
-
-                <%--                <div class="form-group">--%>
-                <%--                    <label for="exampleInputEmail1">Email address</label>--%>
-                <%--                    <input type="email" class="form-control" name="email" id="exampleInputEmail1"  placeholder="Enter email">--%>
-                <%--                </div>--%>
-
-                <%--                <div class="form-group">--%>
-                <%--                    <label for="exampleInputPassword1">Password</label>--%>
-                <%--                    <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password">--%>
-                <%--                </div>--%>
-
-                <%--                <div class="form-group">--%>
-                <%--                    <label for="exampleInputPhoto">Photo</label>--%>
-                <%--                    <input type="file" class="form-control" name="photo" id="exampleInputPhoto" placeholder="Photo">--%>
-                <%--                </div>--%>
-
-                <%--                <button type="submit" class="btn btn-primary">Registration</button>--%>
 
 
             </form>

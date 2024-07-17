@@ -2,6 +2,8 @@ package uz.developers;
 
 import uz.developers.model.Account;
 import uz.developers.service.DatabaseService;
+import uz.developers.service.DbConnection;
+import uz.developers.service.UserService;
 
 import java.util.Scanner;
 
@@ -10,7 +12,8 @@ public class Main {
 
 
         Scanner scanner = new Scanner(System.in);
-        DatabaseService databaseService = new DatabaseService();
+        DatabaseService databaseService = new DatabaseService(DbConnection.getConnection());
+        UserService userService = new UserService(DbConnection.getConnection());
 
 
         boolean islui = true;
@@ -77,7 +80,7 @@ public class Main {
                     databaseService.getAccount(id);
                     break;
                 case 7:
-                    System.out.println(databaseService.getAllTransactions());
+                    System.out.println(userService.getAllTransactions());
             }
         }
 

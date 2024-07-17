@@ -1,6 +1,8 @@
 <%@ page import="uz.developers.service.DatabaseService" %>
 <%@ page import="uz.developers.model.Transactions" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="uz.developers.service.DbConnection" %>
+<%@ page import="uz.developers.service.UserService" %><%--
   Created by IntelliJ IDEA.
   User: user
   Date: 7/3/2024
@@ -11,13 +13,14 @@
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html>
-<%@include file="includes/head.jsp" %>
+<%@include file="WEB-INF/jspf/header.jsp" %>
 <head>
     <title>All Transactions</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="//cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
-<%@include file="includes/navbar.jsp" %>
+<%@include file="WEB-INF/jspf/navbar.jsp" %>
 <body>
 
 
@@ -53,8 +56,8 @@
 
 
         <%
-            DatabaseService databaseService = new DatabaseService();
-            List<Transactions> transactions = databaseService.getAllTransactions();
+            UserService userService = new UserService(DbConnection.getConnection());
+            List<Transactions> transactions = userService.getAllTransactions();
             for (int i = 0; i < transactions.size(); i++) {
                 out.print(
                         "<tr>" +

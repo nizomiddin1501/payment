@@ -10,64 +10,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0419a408-73d1-4aea-a404-2b107c306a35" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/developers/service/DbConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/jspf/header.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/jspf/navbar.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/jspf/slidebar.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/clientList.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/backgounds/Oblozhka.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/backgounds/bank.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/backgounds/digital.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/backgounds/ecommerce.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/backgounds/epay.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/backgounds/hero.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/backgounds/jumbotron.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/backgounds/kisspng.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/backgounds/reg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/backgounds/request.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/backgounds/visa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/registration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7e40af71-2cc9-4771-8add-228efca0306d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7e40af71-2cc9-4771-8add-228efca0306d.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/UserEditServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/developers/model/Bank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/developers/model/Card.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/developers/service/BankService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/developers/service/CardService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uz/developers/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/backgounds/men.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/backgounds/men1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/backgounds/men2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/backgounds/men3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/backgounds/style.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/backgounds/style1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/backgounds/tel.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/users/Brat.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/users/asd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/users/developer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/users/unnamed.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/users/user1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/users/user2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/users/user3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/users/user4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/users/user5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/userDelete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/userEdit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/userList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/userShow.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/Error.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/ClientServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/ClientServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/DeleteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/DeleteServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/HomeServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/LogoutServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/LogoutServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/LogoutServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/TransactionServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/TransactionServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/UserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/UserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/UserServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/WithdrawServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/WithdrawServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/model/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/service/DatabaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/service/DatabaseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/includes/footer.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/includes/head.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/includes/navbar.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/service/DbService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/service/DbService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/jspf/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/jspf/navbar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/registration.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/transaction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/transaction.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/userLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/userLogin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/userRegister.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/controller/ClientServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/ClientServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/controller/DeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/DeleteServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/controller/ClientServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/controller/HomeServlet.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/controller/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/controller/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/LogoutServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/controller/TransactionServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/TransactionServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/controller/LogoutServlet.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/controller/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/UserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/controller/WithdrawServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/WithdrawServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/service/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/service/DatabaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/service/DbService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/service/DbService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Error.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/includes/footer.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/includes/head.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/includes/navbar.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jspf/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jspf/navbar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/clientList.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/registration.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/transaction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/transaction.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/userLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/userLogin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/userRegister.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/userLogin.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,8 +77,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -111,7 +110,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/AllTask/IdeaProjects/A1_ReTakeJava/spring_modul_2/serius_projects/payment/web/images/backgounds",
+    "last_opened_file_path": "D:/AllTask/IdeaProjects/A1_ReTakeJava/spring_modul_2/serius_projects/payment/web",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -129,11 +128,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\AllTask\IdeaProjects\A1_ReTakeJava\spring_modul_2\serius_projects\payment\web\images\backgounds" />
       <recent name="D:\AllTask\IdeaProjects\A1_ReTakeJava\spring_modul_2\serius_projects\payment\web" />
+      <recent name="D:\AllTask\IdeaProjects\A1_ReTakeJava\spring_modul_2\serius_projects\payment\web\images\backgounds" />
+      <recent name="D:\AllTask\IdeaProjects\A1_ReTakeJava\spring_modul_2\serius_projects\payment\web\images\users" />
       <recent name="D:\AllTask\IdeaProjects\A1_ReTakeJava\spring_modul_2\serius_projects\payment\web\WEB-INF\jspf" />
       <recent name="D:\AllTask\IdeaProjects\A1_ReTakeJava\spring_modul_2\payment\src\main\java\uz\developers" />
-      <recent name="D:\AllTask\IdeaProjects\A1_ReTakeJava\spring_modul_2\payment\web" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\AllTask\IdeaProjects\A1_ReTakeJava\spring_modul_2\serius_projects\payment\web\images" />
@@ -141,9 +140,9 @@
       <recent name="D:\AllTask\IdeaProjects\A1_ReTakeJava\spring_modul_2\payment\web\views" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="uz.developers.controller" />
       <recent name="uz.developers.service" />
       <recent name="uz.developers.model" />
-      <recent name="uz.developers.controller" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.apache-tomcat-9.0.14">
@@ -343,7 +342,8 @@
       <workItem from="1720853864545" duration="1625000" />
       <workItem from="1720954714869" duration="1905000" />
       <workItem from="1720966376502" duration="1338000" />
-      <workItem from="1721130374830" duration="11706000" />
+      <workItem from="1721130374830" duration="14485000" />
+      <workItem from="1721207412340" duration="10726000" />
     </task>
     <servers />
   </component>

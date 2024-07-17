@@ -4,26 +4,65 @@ public class User {
     private Integer id;
     private String firstname;
     private String lastname;
-    private String username;
+    private String email;
+    private String phone_number;
+
+    private String photo;
     private String password;
 
+
+    public User(Integer id, String firstname, String lastname, String email, String phone_number, String photo, String password) {
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.email = email;
+        this.phone_number = phone_number;
+        this.photo = photo;
+        this.password = password;
+    }
 
     public User() {
     }
 
-    public User(Integer id, String firstname, String lastname, String username, String password) {
-        this.id = id;
+    public User(String firstname, String lastname, String email, String phone_number, String photo, String password) {
         this.firstname = firstname;
         this.lastname = lastname;
-        this.username = username;
+        this.email = email;
+        this.phone_number = phone_number;
+        this.photo = photo;
         this.password = password;
     }
 
-    public User(String firstname, String lastname, String username, String password) {
+    public User(Integer id, String firstname, String lastname, String email, String password) {
+        this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
-        this.username = username;
+        this.email = email;
         this.password = password;
+    }
+
+    public User(String firstname, String lastname, String email, String password) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.email = email;
+        this.password = password;
+    }
+
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
+
+    public String getPhone_number() {
+        return phone_number;
+    }
+
+    public void setPhone_number(String phone_number) {
+        this.phone_number = phone_number;
     }
 
     public Integer getId() {
@@ -50,12 +89,12 @@ public class User {
         this.lastname = lastname;
     }
 
-    public String getUsername() {
-        return username;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
@@ -66,13 +105,16 @@ public class User {
         this.password = password;
     }
 
+
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
-                ", username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                ", phone_number=" + phone_number +
+                ", photo='" + photo + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }

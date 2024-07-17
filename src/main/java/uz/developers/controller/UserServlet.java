@@ -2,10 +2,9 @@ package uz.developers.controller;
 
 import uz.developers.model.Result;
 import uz.developers.model.User;
-import uz.developers.service.DatabaseService;
 import uz.developers.service.DbConnection;
+import uz.developers.service.UserService;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(value = "/register")
+@WebServlet(value = "/user")
 public class UserServlet extends HttpServlet {
 
     public UserServlet() {
@@ -23,7 +22,7 @@ public class UserServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.sendRedirect("registration.jsp");
+        req.getRequestDispatcher("userList.jsp").forward(req, resp);
 
 
     }
@@ -33,24 +32,25 @@ public class UserServlet extends HttpServlet {
         resp.setContentType("text/html;charset=UTF=8");
         String firstname = req.getParameter("firstname");
         String lastname = req.getParameter("lastname");
-        String username = req.getParameter("username");
+        String email = req.getParameter("email");
+        String  phone_number = req.getParameter("phone_number");
+        String photo = req.getParameter("photo");
         String password = req.getParameter("password");
-        String prePassword = req.getParameter("prePassword");
 
         PrintWriter writer = resp.getWriter();
 
-        if (password.equals(prePassword)){
-            DatabaseService databaseService = new DatabaseService(DbConnection.getConnection());
-            User user = new User(firstname, lastname, username, password);
-            Result result = databaseService.registerUser(user);
+
+            UserService userService = new UserService(DbConnection.getConnection());
+            User user = new User(firstname, lastname, email,phone_number,photo, password);
+            Result result = userService.registerUser(user);
             if (result.isSuccess()){
                 writer.write("<h1 color='green'>"+result.getMessage()+"</h1>");
                 resp.sendRedirect("login.jsp");
             }else {
                 writer.write("<h1 color='red'>"+result.getMessage()+"</h1>");
-                resp.sendRedirect("registration.jsp");
+//                resp.sendRedirect("registration.jsp");
             }
-        }
+
 
 
 
