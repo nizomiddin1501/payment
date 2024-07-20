@@ -9,6 +9,8 @@ public class User {
 
     private String photo;
     private String password;
+    private String card_id;
+    private String card_name;
 
 
     public User(Integer id, String firstname, String lastname, String email, String phone_number, String photo, String password) {
@@ -48,6 +50,22 @@ public class User {
         this.password = password;
     }
 
+
+    public String getCard_id() {
+        return card_id;
+    }
+
+    public void setCard_id(String card_id) {
+        this.card_id = card_id;
+    }
+
+    public String getCard_name() {
+        return card_name;
+    }
+
+    public void setCard_name(String card_name) {
+        this.card_name = card_name;
+    }
 
     public String getPhoto() {
         return photo;
