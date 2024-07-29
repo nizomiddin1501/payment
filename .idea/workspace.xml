@@ -10,23 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0419a408-73d1-4aea-a404-2b107c306a35" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/BankEditServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/BankServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/bank.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/bankDelete.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/bankEdit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/bankList.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/bankShow.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/banks/agrobank.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/banks/bankk.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/banks/hb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/banks/hhj.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/banks/moliya.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/banks/zor.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/service/BankService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/service/BankService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/service/BankService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/service/BankService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,6 +290,8 @@
       <workItem from="1721207412340" duration="21161000" />
       <workItem from="1721406323624" duration="1380000" />
       <workItem from="1721419533355" duration="588000" />
+      <workItem from="1721451457213" duration="641000" />
+      <workItem from="1722283171828" duration="322000" />
     </task>
     <servers />
   </component>
