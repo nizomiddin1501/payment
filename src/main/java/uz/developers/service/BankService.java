@@ -1,11 +1,10 @@
 package uz.developers.service;
 
 import uz.developers.model.Bank;
+import uz.developers.model.Card;
+import uz.developers.model.Order;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +14,8 @@ public class BankService {
     private Connection connection;
 
     PreparedStatement preparedStatement;
+    PreparedStatement preparedStatement1;
+
 
     ResultSet resultSet;
 
@@ -133,6 +134,52 @@ public class BankService {
             System.out.println("Bank is deleted");
         } catch (SQLException e) {
             throw new RuntimeException("Error while deleting bank", e);
+        }
+    }
+
+
+
+
+
+    public boolean buyNewCard(Order order, Card card) {
+        try {
+
+            String insertOrderQuery = "insert into card_order(users_id) values(?) returning id;";
+            String insertCardQuery = "insert into card(order_id,card_number,cardholder_name,expiry_date," +
+                    "issue_date,status,balance,currency,users_id,card_type,bank_name) " +
+                    "values(?,?,?,?,?,?,?,?,?,?,?);";
+
+            preparedStatement = this.connection.prepareStatement(insertOrderQuery);
+            preparedStatement1 = this.connection.prepareStatement(insertCardQuery);
+            preparedStatement.setInt(1, order.getUserId());
+
+            int order_id;
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()){
+               order_id = resultSet.getInt("id");
+               order.setOrderId(order_id);
+               card.setOrder_id(order_id);
+            }
+
+
+            preparedStatement1.setInt(1, card.getOrder_id());
+            preparedStatement1.setString(2, card.getCard_number());
+            preparedStatement1.setString(3, card.getCardholder_name());
+            preparedStatement1.setDate(4, (Date) card.getExpiry_date());
+            preparedStatement1.setDate(5, (Date) card.getIssue_date());
+            preparedStatement1.setString(6, card.getStatus());
+            preparedStatement1.setBigDecimal(7, card.getBalance());
+            preparedStatement1.setString(8, card.getCurrency());
+            preparedStatement1.setInt(9, card.getUser_id());
+            preparedStatement1.setString(10, card.getCard_type());
+            preparedStatement1.setString(11, card.getBank_name());
+
+            int rowsInserted = preparedStatement1.executeUpdate();
+            return rowsInserted > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
         }
     }
 

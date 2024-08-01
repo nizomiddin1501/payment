@@ -85,6 +85,7 @@
 
                         <a href="bankShow.jsp?id=<%=bank.getId()%>" class="btn btn-primary">Show</a>
                         <a href="/bankEdit?id=<%=bank.getId()%>" class="btn btn-light">Edit</a>
+                        <a href="/newCard.jsp?id=<%=bank.getId()%>" class="btn btn-light">Card</a>
                         <a href="bankDelete.jsp?id=<%=bank.getId()%>" class="btn btn-dark"
                            onclick="return confirm('Are you sure you want to delete this car?');">Delete</a>
                     </td>
