@@ -3,10 +3,10 @@ package uz.developers.service;
 import uz.developers.model.Bank;
 import uz.developers.model.Card;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.math.BigDecimal;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CardService {
 
@@ -20,6 +20,31 @@ public class CardService {
 
     public CardService(Connection connection) {
         this.connection = connection;
+    }
+
+
+
+    public List<Card> getAllCardList() {
+        List<Card> cardList = new ArrayList<>();
+        try {
+            String query = "select * from card";
+            preparedStatement = this.connection.prepareStatement(query);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String card_number = resultSet.getString("card_number");
+                String cardholder_name = resultSet.getString("cardholder_name");
+                Date expiry_date = resultSet.getDate("expiry_date");
+                String status = resultSet.getString("status");
+                BigDecimal balance = resultSet.getBigDecimal("balance");
+                String card_type = resultSet.getString("card_type");
+                String bank_name = resultSet.getString("bank_name");
+                cardList.add(new Card(id,card_type,bank_name, card_number,cardholder_name,expiry_date,status,balance));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return cardList;
     }
 
 

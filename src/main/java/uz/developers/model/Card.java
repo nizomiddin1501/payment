@@ -35,6 +35,17 @@ public class Card {
 
     }
 
+    public Card(Integer id, String card_type, String bank_name, String card_number, String cardholder_name, Date expiry_date, String status, BigDecimal balance) {
+        this.id = id;
+        this.card_type = card_type;
+        this.bank_name = bank_name;
+        this.card_number = card_number;
+        this.cardholder_name = cardholder_name;
+        this.expiry_date = expiry_date;
+        this.status = status;
+        this.balance = balance;
+    }
+
     public Card(Integer order_id, String card_type, String bank_name, String card_number, String cardholder_name, Date expiry_date, Date issue_date, String status, BigDecimal balance, String currency, Integer user_id) {
         this.order_id = order_id;
         this.card_type = card_type;

@@ -1,11 +1,20 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: user
-  Date: 6/26/2024
-  Time: 12:42 PM
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="javax.servlet.http.HttpSession" %>
+<%@ page import="uz.developers.model.User" %>
+<%
+//    HttpSession sessions = request.getSession(false);
+//    String authUser = null;
+//    if (sessions != null) {
+//        authUser = (String) sessions.getAttribute("auth");
+//    }
+//    if (authUser == null) {
+//        response.sendRedirect("login.jsp");
+//    }
+%>
+
+
+
 <html>
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
@@ -30,11 +39,6 @@
         }
     </style>
 
-
-<%--    <%@include file="includes/head.jsp" %>--%>
-
-
-
 </head>
 <body>
 
@@ -44,6 +48,7 @@
 
     <%@include file="WEB-INF/jspf/slidebar.jsp"%>
 
+<%--    <h2>Welcome, <%= session.getAttribute("auth") %>!</h2>--%>
 </div>
 
 

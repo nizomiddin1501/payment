@@ -1,81 +1,78 @@
 <%@ page import="java.text.DecimalFormat" %>
-<%@ page import="uz.developers.model.Account" %><%--
-  Created by IntelliJ IDEA.
-  User: user
-  Date: 7/3/2024
-  Time: 6:44 PM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="uz.developers.model.Account" %>
+<%@ page import="uz.developers.model.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <%
-  DecimalFormat decimalFormat = new DecimalFormat("#.##");
-  request.setAttribute("decimalFormat", decimalFormat);
-  Account auth = (Account) request.getSession().getAttribute("auth");
-  if (auth != null) {
-    request.setAttribute("auth", auth);
-  }
+  HttpSession sessions = request.getSession(false);
+  User user = (User) request.getAttribute("user");
+
 
 %>
 
 <html>
 <head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Account</title>
-  <%@include file="includes/head.jsp" %>
+
 </head>
 <body>
-<%@include file="includes/navbar.jsp" %>
-<style type="text/css">
-  .table tbody td {
-    vertical-align: middle;
-  }
-
-  .btn-incre, .btn-decre {
-    box-shadow: none;
-    font-size: 25px;
-  }
-</style>
-
-<div class="container">
-
-  <form action="/client" method="post">
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label">Username</label>
-      <div class="col-sm-7">
-        <input type="text" class="form-control" name="username"
-               placeholder="Enter username" required>
-      </div>
-    </div>
 
 
 
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label">Phone Number</label>
-      <div class="col-sm-7">
-        <input type="number" class="form-control" name="phone_number"
-               placeholder="Enter phone number" required>
-      </div>
-    </div>
+<%@include file="WEB-INF/jspf/navbar.jsp" %>
+<div class="container mt-5">
+  <h2>Account Information</h2>
 
-    <div class=" form-group row">
-      <label class="col-sm-2 col-form-label">Balance</label>
-      <div class="col-sm-7">
-        <input type="number" class="form-control" name="balance"
-               placeholder="Enter balance" required>
-      </div>
-    </div>
+  <div class="container">
+    <h2>Account Information</h2>
+    <p><strong>FirstName:</strong> <%= user.getFirstname() %></p>
+    <p><strong>Lastname:</strong> <%= user.getLastname() %></p>
+    <p><strong>Email:</strong> <%= user.getEmail() %></p>
+    <p><strong>Phone Number:</strong> <%= user.getPhone_number() %></p>
+    <p><strong>Photo:</strong> <img src="<%= user.getPhoto() %>" alt="Profile Picture" class="rounded-circle" style="width: 100px; height: 100px;"></p>
+    <p><strong>Password:</strong> <%= user.getPassword() %></p>
+  </div>
 
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label">Card Number</label>
-      <div class="col-sm-7">
-        <input type="text" class="form-control" name="card_number"
-               placeholder="Enter card number" required>
-      </div>
-    </div>
+  <table class="table">
+    <tr>
+      <th>Fistname:</th>
+      <td><%= user.getFirstname() %></td>
+    </tr>
 
-    <button type="submit" class="btn btn-primary" style="float: right">Add Account</button>
-  </form>
+    <tr>
+      <th>Lastname:</th>
+      <td><%= user.getLastname() %></td>
+    </tr>
+
+    <tr>
+      <th>Email:</th>
+      <td><%= user.getEmail() %></td>
+    </tr>
+
+    <tr>
+      <th>Phone Number:</th>
+      <td><%= user.getPhone_number() %></td>
+    </tr>
+
+    <tr>
+      <th>Photo:</th>
+      <td><%= user.getPhoto() %></td>
+    </tr>
+
+    <tr>
+      <th>Password:</th>
+      <td><%= user.getPassword()%></td>
+    </tr>
+
+
+
+  </table>
 </div>
-<%@include file="includes/footer.jsp" %>
+
+
+
 
 
 </body>

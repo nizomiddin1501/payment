@@ -1,12 +1,19 @@
 
 
 <%@ page import="uz.developers.model.User" %>
+<%@ page import="uz.developers.model.Bank" %>
 <%
     //    User auth = (User) request.getSession().getAttribute("auth");
 //    if (auth != null) {
 //        request.setAttribute("auth", auth);
 //    } else {
 //        response.sendRedirect("login.jsp");
+//    }
+
+//    Bank bank = (Bank) request.getAttribute("bank");
+//    if (bank == null) {
+//        out.println("No bank found for order new card.");
+//        return;
 //    }
 
 %>
@@ -30,6 +37,8 @@
             <h2>New Card</h2>
             </hr>
             <form action="/orderNewCard" method="post">
+
+                <input type="hidden" name="bankId" value="${bankId}">
 
                 <div class="form-group">
                     <label>User ID</label>

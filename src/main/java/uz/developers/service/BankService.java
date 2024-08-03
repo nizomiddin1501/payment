@@ -153,34 +153,36 @@ public class BankService {
             preparedStatement1 = this.connection.prepareStatement(insertCardQuery);
             preparedStatement.setInt(1, order.getUserId());
 
-            int order_id;
+            int order_id = -1;
             resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()){
                order_id = resultSet.getInt("id");
-               order.setOrderId(order_id);
-               card.setOrder_id(order_id);
+//               order.setOrderId(order_id);
+//               card.setOrder_id(order_id);
             }
 
 
-            preparedStatement1.setInt(1, card.getOrder_id());
-            preparedStatement1.setString(2, card.getCard_number());
-            preparedStatement1.setString(3, card.getCardholder_name());
-            preparedStatement1.setDate(4, (Date) card.getExpiry_date());
-            preparedStatement1.setDate(5, (Date) card.getIssue_date());
-            preparedStatement1.setString(6, card.getStatus());
-            preparedStatement1.setBigDecimal(7, card.getBalance());
-            preparedStatement1.setString(8, card.getCurrency());
-            preparedStatement1.setInt(9, card.getUser_id());
-            preparedStatement1.setString(10, card.getCard_type());
-            preparedStatement1.setString(11, card.getBank_name());
+            if (order_id!=-1) {
+                preparedStatement1.setInt(1, card.getOrder_id());
+                preparedStatement1.setString(2, card.getCard_number());
+                preparedStatement1.setString(3, card.getCardholder_name());
+                preparedStatement1.setDate(4, (Date) card.getExpiry_date());
+                preparedStatement1.setDate(5, (Date) card.getIssue_date());
+                preparedStatement1.setString(6, card.getStatus());
+                preparedStatement1.setBigDecimal(7, card.getBalance());
+                preparedStatement1.setString(8, card.getCurrency());
+                preparedStatement1.setInt(9, card.getUser_id());
+                preparedStatement1.setString(10, card.getCard_type());
+                preparedStatement1.setString(11, card.getBank_name());
 
-            int rowsInserted = preparedStatement1.executeUpdate();
-            return rowsInserted > 0;
+                int rowsInserted = preparedStatement1.executeUpdate();
+                return rowsInserted > 0;
+            }
         } catch (SQLException e) {
             e.printStackTrace();
-            return false;
         }
+        return false;
     }
 
 

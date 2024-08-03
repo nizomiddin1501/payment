@@ -1,7 +1,6 @@
 package uz.developers.controller;
 
 import uz.developers.model.User;
-import uz.developers.service.DatabaseService;
 import uz.developers.service.DbConnection;
 import uz.developers.service.UserService;
 
@@ -10,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -29,11 +29,14 @@ public class LoginServlet extends HttpServlet {
         UserService userService = new UserService(DbConnection.getConnection());
         User login = userService.login(email, password);
         if (login != null){
-            req.getSession().setAttribute("auth", login);
-            resp.sendRedirect("home.jsp");
+//            req.getSession().setAttribute("auth", login);
+//            resp.sendRedirect("home.jsp");
+            HttpSession session = req .getSession();
+            session.setAttribute("auth", login); //
+            resp .sendRedirect("home.jsp");
         }else {
             writer.write("<h1>Password or login error</h1>");
-            resp.sendRedirect("login.jsp");
+            req .getRequestDispatcher("login.jsp").forward(req,resp);
         }
 
 

@@ -46,7 +46,7 @@ public class NewCardServlet extends HttpServlet {
         boolean isCardAdded = bankService.buyNewCard(order,card);
 
         if (isCardAdded) {
-            response.sendRedirect("userList.jsp");
+            response.sendRedirect("cardList.jsp");
         } else {
             response.sendRedirect("bank.jsp");
         }

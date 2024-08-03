@@ -10,11 +10,11 @@
 //        response.sendRedirect("login.jsp");
 //    }
 
-    Bank bank = (Bank) request.getAttribute("bank");
-    if (bank == null) {
-        out.println("No bank found for order new card.");
-        return;
-    }
+//    Bank bank = (Bank) request.getAttribute("bank");
+//    if (bank == null) {
+//        out.println("No bank found for order new card.");
+//        return;
+//    }
 
 %>
 
@@ -38,7 +38,7 @@
             </hr>
             <form action="/orderNewCard" method="post">
 
-                <input type="hidden" name="bankId" value="<%= bank.getId() %>">
+                <input type="hidden" name="bankId" value="${bankId}">
 
                 <div class="form-group">
                     <label>User ID</label>

@@ -1,6 +1,7 @@
 package uz.developers;
 
 import uz.developers.model.Account;
+import uz.developers.service.BankService;
 import uz.developers.service.DatabaseService;
 import uz.developers.service.DbConnection;
 import uz.developers.service.UserService;
@@ -81,6 +82,11 @@ public class Main {
                     break;
                 case 7:
                     System.out.println(userService.getAllTransactions());
+                    break;
+                case 8:
+                    BankService bankService = new BankService(DbConnection.getConnection());
+
+                   // bankService.buyNewCard()
             }
         }
 
