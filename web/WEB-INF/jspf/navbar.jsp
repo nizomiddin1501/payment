@@ -11,7 +11,7 @@
 //        response.sendRedirect("login.jsp");
 //    }
 
-    User user = new User();
+    User currentUser = new User();
 %>
 
 <style>

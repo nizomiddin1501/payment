@@ -1,11 +1,11 @@
-<%@ page import="java.text.DecimalFormat" %>
-<%@ page import="uz.developers.model.Account" %>
+
 <%@ page import="uz.developers.model.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
   HttpSession sessions = request.getSession(false);
   User user = (User) request.getAttribute("user");
+  User user1 = new User();
 
 
 %>
@@ -35,40 +35,10 @@
     <p><strong>Password:</strong> <%= user.getPassword() %></p>
   </div>
 
-  <table class="table">
-    <tr>
-      <th>Fistname:</th>
-      <td><%= user.getFirstname() %></td>
-    </tr>
-
-    <tr>
-      <th>Lastname:</th>
-      <td><%= user.getLastname() %></td>
-    </tr>
-
-    <tr>
-      <th>Email:</th>
-      <td><%= user.getEmail() %></td>
-    </tr>
-
-    <tr>
-      <th>Phone Number:</th>
-      <td><%= user.getPhone_number() %></td>
-    </tr>
-
-    <tr>
-      <th>Photo:</th>
-      <td><%= user.getPhoto() %></td>
-    </tr>
-
-    <tr>
-      <th>Password:</th>
-      <td><%= user.getPassword()%></td>
-    </tr>
 
 
 
-  </table>
+
 </div>
 
 

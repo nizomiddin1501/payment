@@ -10,36 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0419a408-73d1-4aea-a404-2b107c306a35" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/AccountServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/CardServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/LogoutServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/cardList.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/NewCardServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/controller/NewCardServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/model/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/model/Card.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/service/BankService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/service/BankService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/service/CardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/classes/uz/developers/service/CardService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/jspf/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/WEB-INF/jspf/navbar.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/account.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/account.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/bankList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/bankList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/newCard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/payment_Web_exploded/newCard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/controller/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/controller/NewCardServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/controller/NewCardServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/model/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/model/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/service/BankService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/service/BankService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uz/developers/service/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uz/developers/service/CardService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/jspf/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jspf/navbar.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/account.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/account.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/newCard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/newCard.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +60,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/AllTask/IdeaProjects/A1_ReTakeJava/spring_modul_2/serius_projects/payment/web&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IdeaProjects/A1_ReTakeJava/Spring1/modul2/Banking&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -326,7 +303,23 @@
       <workItem from="1722501268004" duration="786000" />
       <workItem from="1722512723482" duration="4195000" />
       <workItem from="1722581638459" duration="2420000" />
-      <workItem from="1722669469700" duration="10516000" />
+      <workItem from="1722669469700" duration="14329000" />
+      <workItem from="1722834972135" duration="624000" />
+      <workItem from="1723250727644" duration="717000" />
+      <workItem from="1723264360731" duration="423000" />
+      <workItem from="1723264808935" duration="1519000" />
+      <workItem from="1723266601377" duration="7326000" />
+      <workItem from="1723362043175" duration="1820000" />
+      <workItem from="1723437855672" duration="1199000" />
+      <workItem from="1723709166851" duration="62000" />
+      <workItem from="1724322768854" duration="1639000" />
+      <workItem from="1724654729139" duration="283000" />
+      <workItem from="1724657822611" duration="636000" />
+      <workItem from="1725015944598" duration="304000" />
+      <workItem from="1725085470690" duration="296000" />
+      <workItem from="1725428891704" duration="430000" />
+      <workItem from="1725441023793" duration="1238000" />
+      <workItem from="1725456993877" duration="378000" />
     </task>
     <servers />
   </component>
